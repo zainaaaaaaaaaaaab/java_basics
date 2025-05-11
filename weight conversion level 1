@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        double mass;
+        double lbs;
+
+        System.out.println("Enter your mass: ");
+        mass = scanner.nextDouble();
+
+        lbs = mass * 2.20;
+        System.out.printf("Your mass in lbs is %.2f pounds", lbs );
+
+        scanner.close();
+
+    }
+}
