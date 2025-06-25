@@ -1,0 +1,45 @@
+import java.util.*
+
+public class Main{
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        Random random = new Random();
+
+        String [] choices = {"rock", "paper", "scissors"};
+        String playerChoice;
+        String computerChoice;
+        String playAgain = "yes";
+
+        do{
+            System.out.println("Enter your move(rock, paper, scissor): ");
+            playerChoice = in.next().toLowerCase();
+
+
+            if(!playerChoice.equals("rock")&& !playerChoice.equals("paper") &&!playerChoice.equals("scissor")){
+                System.out.println("INVALID CHOICE");
+            }
+            computerChoice = choices[random.nextInt(3)];
+            System.out.println("computer's move is : " + computerChoice);
+
+            if(computerChoice.equals(playerChoice)){
+                System.out.println("its a tie!");
+            }
+            else if((playerChoice.equals("rock")&& computerChoice.equals("scissors")) ||
+                    (playerChoice.equals("paper")&& computerChoice.equals("rock")) ||
+                    (playerChoice.equals("scissors")&& computerChoice.equals("paper"))){
+                System.out.println("you win!!");
+            }
+            else{
+                System.out.println("You lose!");
+            }
+
+            System.out.println("Do you want to play again? ");
+            playAgain = in.nextLine().toLowerCase();
+
+        }while(playAgain.equals("yes"));
+
+        System.out.println("Thanks for playing!");
+
+        in.close();
+    }
+}
