@@ -1,0 +1,31 @@
+import java.sql.SQLOutput;
+import java.time.DayOfWeek;
+import java.time.LocalDate;
+import java.util.*;
+
+    public class CalendarDayFinder {
+        public static void main(String[] args) {
+            Scanner sc = new Scanner(System.in);
+            System.out.print("Enter day (1-31): ");
+            int day = sc.nextInt();
+
+            System.out.print("Enter month (1-12): ");
+            int month = sc.nextInt();
+
+            System.out.print("Enter year (e.g., 2025): ");
+            int year = sc.nextInt();
+
+            try{
+                LocalDate date= LocalDate.of(year, month, day);
+                //Method Signature of LocalDate.of
+                //public static LocalDate of(int year, int month, int dayOfMonth)
+                
+                DayOfWeek dayOfWeek = date.getDayOfWeek();
+
+                System.out.println("The day of the week is: " + dayOfWeek);
+            } catch (Exception e) {
+                System.out.println("INVALID DATE ENTERED");
+            }
+            sc.close();
+        }
+    }
