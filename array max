@@ -1,0 +1,16 @@
+import java.lang.reflect.Array;
+import java.util.Scanner;
+
+public class practicing {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+         int [] marks = {2,4,1,6,7,5};
+         int max =0;
+         for(int e : marks){
+             if(e>max){
+                 max = e;
+             }
+         }
+        System.out.println("the maximum array is : " + max);
+    }
+}
