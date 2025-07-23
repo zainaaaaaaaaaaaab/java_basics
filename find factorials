@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class justPracticing {
+    static int factorial(int n){
+        if(n==0 || n==1){
+            return 1;
+        }
+        else{
+            return n * factorial(n-1);
+        }
+    }
+    public static void main(String []args){
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("enter a digit you wanna find factorial of : ");
+        int n = sc.nextInt();
+        System.out.println("The factorial of " + n + " is : " + factorial(n));
+
+        sc.close();
+    }
+}
