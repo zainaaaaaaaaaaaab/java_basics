@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class justPracticing {
+    static int multiTable(int n){
+        for(int i = 1; i<=10; i++){
+            System.out.println(n + " * " + i + " = " + (n * i));
+        }
+        return n;
+    }
+    public static void main(String []args){
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("enter a digit you wanna find multiTable of : ");
+        int n = sc.nextInt();
+        multiTable(n);
+
+        sc.close();
+    }
+}
