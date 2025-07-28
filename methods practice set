@@ -1,0 +1,75 @@
+// 1. find n term of fibonacci series
+
+public class Main {
+static int fibonacciSeries(int n) {
+    if(n==1){
+        return 0;
+    }
+    if(n==2){
+        return 1;
+    }
+    return fibonacciSeries(n-2) + fibonacciSeries(n-1);
+}
+    public static void main(String[] args) {
+
+   int c = fibonacciSeries(10);
+        System.out.println(c);
+    }
+}
+
+
+
+//2. find the function to find average of a set of numbers passed as arguments
+
+/* The int... numbers part is called "varargs", short for variable-length arguments.
+🔍 What do the three dots (...) mean?
+In Java, int... numbers means:
+You can pass any number of int values to this function and inside the function, they will be treated like an array.*/
+
+
+public class Main {
+    static int averageFinds(int... n){
+        int sum=0;
+        for(int num : n){
+            sum += num;
+        }
+        return (int) sum / n.length;
+}
+    public static void main(String[] args) {
+        double avg = averageFinds(10,20,30,40);
+        System.out.println("Average: " + avg);
+    }
+}
+
+
+//3. repeat 4 using recursions
+public class Main {
+
+    static void repeat(int n){
+       if(n==0){
+           return;
+       }
+        System.out.println(4);
+        repeat(n-1);
+    }
+    public static void main(String [] args) {
+        repeat(5);
+    }
+}
+
+
+//4. convert celsius to fahrenheit
+public class Main {
+    static double temperature(int n) {
+        if (n == 0) {
+            return 32;
+        }
+        return ((n * 9 / 5) + 32);
+    }
+
+    public static void main(String[] args) {
+        int c = (int) temperature(32);
+        System.out.println(c);
+    }
+}
+
