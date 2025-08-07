@@ -1,0 +1,29 @@
+// 1 create a class square with a method to initialize its side  calculating area and parametre
+
+class square {
+    int side;
+    int area;
+    int parametre;
+
+    public int getSide() {
+        return side;
+    }
+
+    public int getArea() {
+        return side * side;
+    }
+
+    public int getParametre() {
+        return 4 * side;
+    }
+}
+    public class Main {
+        public static void main(String[] args) {
+            square pg = new square();
+            pg.side = 3;
+
+            System.out.println(" Area is : " + pg.getArea());
+            System.out.println(" parametre  is : " +pg.getParametre());
+        }
+    }
+
