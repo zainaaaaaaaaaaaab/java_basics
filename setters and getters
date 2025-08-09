@@ -1,0 +1,31 @@
+//getters and setters
+class myEmployee {
+    private int id;
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String n) {
+        name = n;
+    }
+
+    public void setId(int i) {
+        id = i;
+    }
+
+    public int getId() {
+        return id;
+    }
+}
+    public class Main {
+        public static void main(String[] args) {
+            myEmployee zainaab = new myEmployee();
+            zainaab.setName("zainu");
+            System.out.println(zainaab.getName());
+
+            zainaab.setId(234);
+            System.out.println(zainaab.getId());
+        }
+    }
