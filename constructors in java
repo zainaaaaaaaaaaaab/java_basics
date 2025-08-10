@@ -1,0 +1,32 @@
+class Employee{
+    private String name;
+    private int id;
+
+    // 1.
+    public Employee(){
+        name = "zainuu";
+        id = 22;
+    }
+    //2.
+    public Employee(String myName, int myId){
+        name = myName;
+        id = myId;
+    }
+
+    public void setName(String n){
+        this.name = n;
+    }
+    public String getName(){
+       return name;
+    }
+}
+public class Main{
+    public static void main(String[] args) {
+        Employee zainab = new Employee("zainuuu", 25);
+        // if parametre isnt given 1 will be used
+        // if parametre isnt given 2 will be used
+       
+        System.out.println(zainab.getName());
+    }
+}
+
