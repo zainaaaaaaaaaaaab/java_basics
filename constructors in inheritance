@@ -1,0 +1,32 @@
+class Base{
+    Base(){
+        System.out.println("I'm Base constructor");
+    }
+    Base(int x){
+        System.out.println(" the value of x is : " + x);
+    }
+}
+class Derived extends Base{
+    Derived(){
+        System.out.println("I'm Derived constructor");
+    }
+    Derived(int x , int y){
+        super(x);
+        System.out.println(" the value of y is : " + y);
+    }
+}
+class ChildOfDerived extends Derived{
+    ChildOfDerived(){
+        System.out.println("I'm child of derived constructor");
+    }
+    ChildOfDerived(int x , int y, int z){
+        super(x,y);
+        System.out.println(" the value of z is : " + z);
+    }
+}
+
+public class constructors_in_inheritance {
+    public static void main(String[] args) {
+        ChildOfDerived huh = new ChildOfDerived(20,40,50);
+    }
+}
